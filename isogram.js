@@ -20,4 +20,4 @@ const expected4 = false
 const input5 = "isIsogram"
 const expected5 = false
 
-console.log(descendingOrder(input1))
+console.log(isIsogram(input1))
