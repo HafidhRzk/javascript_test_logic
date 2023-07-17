@@ -12,6 +12,6 @@ const input2 = 145263
 const expected2 = 654321
 
 const input3 = 123456789 
-const expected13 = 987654321
+const expected3 = 987654321
 
 console.log(descendingOrder(input1))
