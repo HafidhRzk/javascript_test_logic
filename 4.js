@@ -1,20 +1,38 @@
 function targetTerdekat(arr) {
   // you can only write your code here!
-  let indexO = arr.indexOf('o');
-  if (indexO === -1) return 0;
+  let indexO = -1;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'o') {
+      indexO = i;
+      break;
+    }
+  }
+
+  if (indexO === -1) {
+    return 0
+  };
 
   let minDistance = Infinity;
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === 'x') {
-      let distance = Math.abs(i - indexO);
+      let distance = i - indexO;
+      if (distance < 0) {
+        distance *= -1;
+      }
+
       if (distance < minDistance) {
         minDistance = distance;
       }
     }
   }
 
-  return minDistance === Infinity ? 0 : minDistance;
+  if (minDistance === Infinity) {
+    minDistance = 0;
+  }
+
+  return minDistance;
 }
 
 console.log(targetTerdekat([" ", "", "o", " ", " ", "x", " ", "x"])); // 3

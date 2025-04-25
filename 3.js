@@ -7,9 +7,15 @@ function damageCalculation(numberOfAttacks, damagePerAttack) {
   // Code disini
   let totalDamage = 0
   for (let i = 0; i < numberOfAttacks; i++) {
-    totalDamage += attack(damagePerAttack)
+    // console.log("attack ke", i + 1)
+    const damage = attack(damagePerAttack)
+    // console.log("damage", damage)
+    totalDamage += damage
   }
+
+  return totalDamage
 }
+
 
 // TEST CASE
 console.log(damageCalculation(9, 25)); // 207
