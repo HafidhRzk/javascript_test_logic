@@ -335,7 +335,6 @@ let order2 = [
     reviewers: 412
   }
 ]
-
 console.log(makanSkuy(order2))
 /*
 {
@@ -395,7 +394,6 @@ let order3 = [
     reviewers: 120
   }
 ]
-
 console.log(makanSkuy(order3))
 /*
 {

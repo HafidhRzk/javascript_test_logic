@@ -11,7 +11,33 @@ function hasil(a, b) {
 
     const hobby = hobi(b)
 
+    const arr = [
+        name,
+        hobby
+    ]
+
+    const obj = {
+        pertama: name,
+        kedua: hobby,
+    }
+
+    console.log(arr)
+
+    for (const val of arr) {
+        console.log("--------For of---------")
+        console.log(val)
+        console.log("-----------------------")
+    }
+
+    for (const val in arr) {
+        console.log("--------For in---------")
+        console.log(val + " : " + arr[val])
+        console.log("-----------------------")
+    }
+
     return name + " " + hobby
 }
 
-console.log(hasil("budi", "makan"))
+hasil("budiono", "makan")
+
+// console.log(hasil("budi", "makan"))
